@@ -7,7 +7,7 @@ function increaseCount(){
         //This is closure because we area accessing the variable from outer function.
     }
     displayCount();
-    checkCountValue();
+    checkCountValue();//T
 }
 
 function checkCountValue(){
