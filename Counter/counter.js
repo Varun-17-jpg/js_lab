@@ -2,14 +2,12 @@ let count = 0;
 
 function increaseCount(){
     count++;
-    function displayCount(){
-        document.getElementById('countDisplay').innerHTML = count;
-        //This is closure because we area accessing the variable from outer function.
-    }
     displayCount();
     checkCountValue();//This is example of hoisting.
 }
-
+function displayCount(){
+    document.getElementById('countDisplay').innerHTML = count;
+}
 function checkCountValue(){
     if(count === 10){
         alert("Congratulations on reaching 10 followers");
@@ -18,3 +16,8 @@ function checkCountValue(){
     }
 }
 
+function resetCount(){
+    count = 0;
+    displayCount();
+    alert("Followers Count has been set to 0");
+}
